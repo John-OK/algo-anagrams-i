@@ -1,5 +1,6 @@
 # Don't forget to run your tests!
 
+# FIRST ATTEMPT USING SORTED (PASSED ALL TEST)
 # def is_character_match(string1, string2):
 # 	str1_arr = sorted(list(string1.lower()))
 # 	str2_arr = sorted(list(string2.lower()))
@@ -10,16 +11,17 @@
 
 # 	return True
 
+# Challenge: Solve the same exercise without using built-in "sorted" method
 def is_character_match(str1, str2):
-	# remove spaces
+	# Remove spaces
 	str1 = ''.join(str1.split())
 	str2 = ''.join(str2.split())
 
-	# can't be anagrams if different number of characters
+	# Can't be anagrams if different number of characters
 	if len(str1) != len(str2):
 		return False
 
-	# make all characters lowercase and convert to elements in a list
+	# Make all characters lowercase and convert to elements in a list
 	str1_arr = list(str1.lower())
 	str2_arr = list(str2.lower())
 
